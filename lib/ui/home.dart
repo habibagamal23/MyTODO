@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:todo/ui/setting/settinghome.dart';
+
+import 'list/listhome.dart';
 
 class  home extends StatefulWidget{
   static  final String RouteName= "home" ;
@@ -44,6 +47,13 @@ class _homeState extends State<home> {
          ],
        ),
      ),
+     body: getSellectIdex(),
    );
+  }
+  Widget getSellectIdex(){
+    if(selectedIndex==0)
+      return listhome();
+    return settinghome();
+
   }
 }
