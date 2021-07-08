@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:todo/main.dart';
+import 'package:todo/ui/list/Todoitems.dart';
+
 class listhome extends StatefulWidget {
   @override
   _listhomeState createState() => _listhomeState();
@@ -50,7 +52,14 @@ class _listhomeState extends State<listhome> {
         focusedDay = newFocusedDay;
       });
     },
-          ) ],
+          ),
+        Expanded(child: ListView.builder
+          (itemCount: 5,itemBuilder:( context , index){
+            return todoItem();
+        }
+
+        ),)
+        ],
       ),
     );
   }
