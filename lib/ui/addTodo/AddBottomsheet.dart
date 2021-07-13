@@ -1,5 +1,4 @@
 
-import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -22,7 +21,10 @@ class _AddBottomsheetState extends State<AddBottomsheet> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
 
         children: [
-          Text("Add todo"),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("Add todo",textAlign: TextAlign.center,),
+          ),
 
         TextField(
           maxLines: 4,
